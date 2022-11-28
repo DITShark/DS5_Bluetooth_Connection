@@ -1,6 +1,6 @@
 # DS5_Bluetooth_Connection
 This is for Connection between Ubuntu (PI4 &amp; NUC) and Dualsense 5 through Bluetooth.
-<br>
+<br><br>
 
 ## Bluetooth Connection with Ubuntu Terminal
 Refer to this website : https://www.baeldung.com/linux/bluetooth-via-terminal
@@ -34,7 +34,6 @@ Controller 24:EE:9A:9D:33:D8 (public)
 ```
 <br>
 You can check your status at here, and the most important part is to check the power, discoverable and pairable status.<br><br>
-<br>
 
 ### 2. Change Your Power, Discoverable and Pairable Status. 
 ###### (If all status are on you can skip this part !)
@@ -50,6 +49,5 @@ Changing discoverable on succeeded
 $ bluetoothctl pairable on
 Changing pairable on succeeded
 ```
-<br>
 
 ### 3. Connect to your DS5 joystick.
