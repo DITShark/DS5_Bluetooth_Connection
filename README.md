@@ -6,11 +6,12 @@ Refer to this website : https://www.baeldung.com/linux/bluetooth-via-terminal
 <br>
 You can use this as a reference.
 <br>
+
 ### 1. Open your terminal and use bluetoothctl command. And then use show command.
 ```
-~$ bluetoothctl
+$ bluetoothctl
 
-~$ show
+$ show
 Controller 24:EE:9A:9D:33:D8 (public)
 	Name: shark-ubuntu20
 	Alias: shark-ubuntu20
