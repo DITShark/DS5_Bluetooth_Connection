@@ -1,5 +1,6 @@
 # DS5_Bluetooth_Connection
 This is for Connection between Ubuntu (PI4 &amp; NUC) and Dualsense 5 through Bluetooth.
+<br>
 
 ## Bluetooth Connection with Ubuntu Terminal
 Refer to this website : https://www.baeldung.com/linux/bluetooth-via-terminal
