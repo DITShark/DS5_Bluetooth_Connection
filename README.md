@@ -80,8 +80,6 @@ Device 53:8A:09:61:08:4B 53-8A-09-61-08-4B
 Device 48:E7:DA:FC:62:8A RTK_BT_4.1
 Device 70:58:96:04:91:7E Mi_Watch
 Device 64:D6:C6:62:D1:12 64-D6-C6-62-D1-12
-[bluetooth]# pair 48:18:8D:F5:11:EF
-
 ```
 And then use pair and connect command.
 ###### (If pair command failed means you have connected this joystick before, just use connect one command only)
@@ -99,3 +97,21 @@ Attempting to connect to 48:18:8D:F5:11:EF
 ...
 Connection successful
 ```
+Showing Connection successful means you connect to your joystick !
+######(If you want to disconnect just use disconnect command !)
+<br>
+## Joystick Control Node
+After connecting to your joystick, the next step is to install Python modules : Pygame.
+```
+pip install pygame
+```
+Then git clone the DS5 controller node from here.
+```
+git clone git@github.com:DITShark/DS5_Bluetooth_Connection.git
+```
+Then you can use your DS5 joystick and get the message from ds5_joy topic !
+```
+```
+
+
+
