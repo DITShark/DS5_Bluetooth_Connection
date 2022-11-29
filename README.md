@@ -40,14 +40,62 @@ You can check your status at here, and the most important part is to check the p
 Use power on, discoverable on, pairable on 3 commands to open needed status.
 ```
 $ bluetoothctl power on
-[CHG] Controller 00:1A:7D:DA:71:15 Class: 0x006c0104
+[CHG] Controller 24:EE:9A:9D:33:D8 Class: 0x006c0104
 Changing power on succeeded
+
 
 $ bluetoothctl discoverable on
 Changing discoverable on succeeded
+
 
 $ bluetoothctl pairable on
 Changing pairable on succeeded
 ```
 
 ### 3. Connect to your DS5 joystick.
+Open your DS5 Pairing Mode (Press Create & PS Button)
+<br>
+Check your DS5 joystick MAC address first, Device name will be Wireless Controler, it will be uesd in the next step !<br>
+```
+[bluetooth]# devices
+Device 48:18:8D:F5:11:EF Wireless Controller
+Device 56:3F:42:C3:B9:8B 56-3F-42-C3-B9-8B
+Device 7B:B4:CD:88:70:47 7B-B4-CD-88-70-47
+Device 46:7D:13:7D:17:72 46-7D-13-7D-17-72
+Device 61:38:62:53:E4:20 61-38-62-53-E4-20
+Device 44:F9:CF:F2:9A:57 44-F9-CF-F2-9A-57
+Device 67:9A:BC:DD:6B:66 67-9A-BC-DD-6B-66
+Device 7E:60:67:98:00:40 7E-60-67-98-00-40
+Device 4D:84:EF:96:AA:C2 4D-84-EF-96-AA-C2
+Device 7D:14:5A:F9:3F:5F 7D-14-5A-F9-3F-5F
+Device 47:57:8C:F9:A7:C1 47-57-8C-F9-A7-C1
+Device 44:09:40:09:F5:5C 44-09-40-09-F5-5C
+Device 5F:40:02:DD:E2:15 5F-40-02-DD-E2-15
+Device 24:EE:9A:E4:20:81 LAPTOP-4F2N8QDB
+Device 52:65:F3:B6:52:6E 52-65-F3-B6-52-6E
+Device 6D:E6:40:3C:1D:BC 6D-E6-40-3C-1D-BC
+Device A4:6B:B6:26:FF:51 DIT-NUC11PAHi7
+Device 57:10:59:14:F6:7A 57-10-59-14-F6-7A
+Device 53:8A:09:61:08:4B 53-8A-09-61-08-4B
+Device 48:E7:DA:FC:62:8A RTK_BT_4.1
+Device 70:58:96:04:91:7E Mi_Watch
+Device 64:D6:C6:62:D1:12 64-D6-C6-62-D1-12
+[bluetooth]# pair 48:18:8D:F5:11:EF
+
+```
+And then use pair and connect command.
+###### (If pair command failed means you have connected this joystick before, just use connect one command only)
+```
+$ bluetoothctl pair 48:18:8D:F5:11:EF
+Attempting to pair with 48:18:8D:F5:11:EF
+[CHG] Device 48:18:8D:F5:11:EF Connected: yes
+...
+[CHG] Device 48:18:8D:F5:11:EF Paired: yes
+Pairing successful
+
+
+$ bluetoothctl connect 48:18:8D:F5:11:EF
+Attempting to connect to 48:18:8D:F5:11:EF
+...
+Connection successful
+```
